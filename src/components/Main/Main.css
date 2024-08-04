@@ -1,0 +1,41 @@
+.cards__list-container {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.cards__list {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+li {
+  position: relative;
+}
+
+.card__name {
+  font-family: Cabinet Grotesk;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.2;
+  background: white;
+  color: rgba(0, 0, 0, 0.6);
+  border-radius: 3px;
+  margin: 0 auto;
+  padding: 0 12px;
+  position: absolute;
+  top: 15px;
+  left: 50%; /* esto mueve el bore del elemento un 50%*/
+  transform: translateX(
+    -50%
+  ); /* mueve el elemento a la izquierda un 50% pero de su propio ancho, lo que termina centrando el elemento */
+}
+
+.card__image {
+  width: 100%;
+  object-fit: cover;
+}
