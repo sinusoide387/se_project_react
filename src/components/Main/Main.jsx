@@ -1,6 +1,7 @@
 import WeatherCard from "../WeatherCard/WeatherCard";
 import { defaultClothingItems } from "../../utils/constants";
 import "../Main/Main.css";
+import ItemCard from "../ItemCard/ItemCard";
 function Main() {
   console.log(defaultClothingItems);
   return (
@@ -11,16 +12,7 @@ function Main() {
         <div className="cards__list-container">
           <ul className="cards__list">
             {defaultClothingItems.map((item) => {
-              return (
-                <li key={item._id}>
-                  <h2 className="card__name">{item.name}</h2>
-                  <img
-                    className="card__image"
-                    src={item.link}
-                    alt={item.name}
-                  ></img>
-                </li>
-              );
+              return <ItemCard key={item._id} item={item} />;
             })}
           </ul>
         </div>
