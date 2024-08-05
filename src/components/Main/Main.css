@@ -6,6 +6,7 @@
 .cards__list {
   display: flex;
   flex-direction: row;
+  /* flex-wrap: wrap; */
   gap: 20px;
   padding: 0;
   margin: 0;
@@ -38,4 +39,5 @@ li {
 .card__image {
   width: 100%;
   object-fit: cover;
+  border-radius: 30px;
 }

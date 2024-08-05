@@ -8,10 +8,13 @@ function ItemCard({ item }) {
   );
 }
 
+
 ItemCard.propTypes = {
   item: PropTypes.shape({
+    _id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
+    weather: PropTypes.string.isRequired,
   }).isRequired,
 };
 
