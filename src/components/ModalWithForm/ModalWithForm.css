@@ -1,0 +1,29 @@
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #0000004d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__content {
+  background-color: #ffffff;
+  position: relative;
+}
+
+.modal__close {
+  position: absolute;
+  right: 28px;
+  top: 20px;
+  background-image: url("src/assets/close_icon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
