@@ -8,13 +8,37 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: Cabinet Grotesk;
 }
 
 .modal__content {
   background-color: #ffffff;
+  width: 496px;
+  height: 436px;
+  border-radius: 20px;
   position: relative;
+  padding: 28px 28px 36px;
 }
-
+.modal__title {
+  margin: 0;
+  margin-bottom: 24px;
+}
+.modal__form {
+  display: flex;
+  flex-direction: column;
+}
+.modal__input {
+  display: block;
+  border: none;
+  border-bottom: 1px solid black;
+  width: 100%;
+}
+.modal__fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
 .modal__close {
   position: absolute;
   right: 28px;
@@ -26,4 +50,7 @@
   width: 20px;
   height: 20px;
   cursor: pointer;
+}
+.modal__submit {
+ 
 }

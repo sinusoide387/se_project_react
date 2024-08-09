@@ -25,7 +25,7 @@ function ModalWithForm() {
               placeholder="Image URL"
             />
           </label>
-          <fieldset className="modal__ratio-button">
+          <fieldset className="modal__fieldset">
             <legend className="modal__legend">Select the weather type:</legend>
             <label
               htmlFor="hot"
@@ -49,6 +49,9 @@ function ModalWithForm() {
               cold
             </label>
           </fieldset>
+          <button type="submit" className="modal__submit">
+            Add garment
+          </button>
         </form>
       </div>
     </div>
