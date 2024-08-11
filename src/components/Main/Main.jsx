@@ -14,9 +14,9 @@ function Main({ weather }) {
         <div className="cards__list-container">
           <ul className="cards__list">
             {defaultClothingItems
-              // .filter((item) => {
-              //   return item.weather === weather.type;
-              // })
+              .filter((item) => {
+                return item.weather === weather.type;
+              })
               .map((item) => {
                 return <ItemCard key={item._id} item={item} />;
               })}

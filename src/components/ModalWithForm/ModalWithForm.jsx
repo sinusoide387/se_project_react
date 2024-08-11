@@ -7,7 +7,7 @@ function ModalWithForm() {
         <h2 className="modal__title">New garment</h2>
         <button type="button" className="modal__close"></button>
         <form className="modal__form">
-          <label htmlFor="name" className="modal__label">
+          <label htmlFor="name" className="modal__label-input">
             Name{" "}
             <input
               type="text"
@@ -16,7 +16,7 @@ function ModalWithForm() {
               placeholder="Name"
             />
           </label>
-          <label htmlFor="imageUrl" className="modal__label">
+          <label htmlFor="imageUrl" className="modal__label-input">
             Image{" "}
             <input
               type="link"
@@ -49,10 +49,12 @@ function ModalWithForm() {
               cold
             </label>
           </fieldset>
-          <button type="submit" className="modal__submit">
+        </form>
+        <div className="button__container">
+          <button type="submit" className="modal__submit-button">
             Add garment
           </button>
-        </form>
+        </div>
       </div>
     </div>
   );

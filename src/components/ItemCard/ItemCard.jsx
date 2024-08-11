@@ -8,14 +8,11 @@ function ItemCard({ item }) {
   );
 }
 
-
 ItemCard.propTypes = {
   item: PropTypes.shape({
-    _id: PropTypes.string.isRequired,
+    _id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
     name: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
-    weather: PropTypes.string.isRequired,
   }).isRequired,
 };
-
 export default ItemCard;
