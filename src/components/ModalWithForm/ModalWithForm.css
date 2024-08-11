@@ -15,7 +15,7 @@
 .modal__content {
   background-color: #ffffff;
   width: 380px;
-  height: 372px;
+  max-height: 372px;
   border-radius: 20px;
   padding: 28px 28px 36px;
   position: relative;
