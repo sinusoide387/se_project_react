@@ -32,21 +32,21 @@ function ModalWithForm() {
               className="modal__label modal__label_type_radio"
             >
               <input id="hot" type="radio" className="modal__radio_input" />
-              hot
+              Hot
             </label>
             <label
               htmlFor="warm"
               className="modal__label modal__label_type_radio"
             >
               <input id="warm" type="radio" className="modal__radio_input" />
-              warm
+              Warm
             </label>
             <label
               htmlFor="cold"
               className="modal__label modal__label_type_radio"
             >
               <input id="cold" type="radio" className="modal__radio_input" />
-              cold
+              Cold
             </label>
           </fieldset>
         </form>
