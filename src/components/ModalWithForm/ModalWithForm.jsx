@@ -1,58 +1,34 @@
+/* eslint-disable react/prop-types */
 import "../ModalWithForm/ModalWithForm.css";
 
-function ModalWithForm() {
+// eslint-disable-next-line react/prop-types
+function ModalWithForm({
+  children,
+  buttonText,
+  titleText,
+  activeModal,
+  closeModal,
+}) {
+  /*el primero(children) es un prop que pasa los elementos que esten adentro de donde se llamo al componente, solo debo poner el children donde quiero que vaya (en este caso dentro de la form)*/
+  /*el segundo y el tercero (buttonText y titleText) son los valores que se van a cambiar de forma dinamica y el valor se le da cuando llamo al componente (en este caso dentro del App component)*/
   return (
-    <div className="modal">
+    <div
+      className={`modal ${
+        activeModal === "add-garment" ? "modal__opened" : ""
+      }`}
+    >
+      {/* dentro del modal usamos destructure para obtener el activeModal value, si el activeModal es igual al string "add-garment" entonces es True y agrega la clase "modal__opened" y se hace visible el modal, de lo contrario aparece un empty string. */}
       <div className="modal__content">
-        <h2 className="modal__title">New garment</h2>
-        <button type="button" className="modal__close"></button>
-        <form className="modal__form">
-          <label htmlFor="name" className="modal__label-input">
-            Name{" "}
-            <input
-              type="text"
-              className="modal__input"
-              id="name"
-              placeholder="Name"
-            />
-          </label>
-          <label htmlFor="imageUrl" className="modal__label-input">
-            Image{" "}
-            <input
-              type="link"
-              className="modal__input"
-              id="imageUrl"
-              placeholder="Image URL"
-            />
-          </label>
-          <fieldset className="modal__fieldset">
-            <legend className="modal__legend">Select the weather type:</legend>
-            <label
-              htmlFor="hot"
-              className="modal__label modal__label_type_radio"
-            >
-              <input id="hot" type="radio" className="modal__radio_input" />
-              Hot
-            </label>
-            <label
-              htmlFor="warm"
-              className="modal__label modal__label_type_radio"
-            >
-              <input id="warm" type="radio" className="modal__radio_input" />
-              Warm
-            </label>
-            <label
-              htmlFor="cold"
-              className="modal__label modal__label_type_radio"
-            >
-              <input id="cold" type="radio" className="modal__radio_input" />
-              Cold
-            </label>
-          </fieldset>
-        </form>
+        <h2 className="modal__title">{titleText}</h2>
+        <button
+          type="button"
+          className="modal__close"
+          onClick={closeModal}
+        ></button>
+        <form className="modal__form">{children}</form>
         <div className="button__container">
           <button type="submit" className="modal__submit-button">
-            Add garment
+            {buttonText}
           </button>
         </div>
       </div>
